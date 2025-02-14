@@ -8,7 +8,8 @@
             //return types and parameters, instance variables, inheritance, constructors, arrays, loop of array, public, private and protected)
 
             //Background color
-            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Clear();
 
             //Prints the menu
@@ -36,15 +37,85 @@
             Console.WriteLine("");
             Console.Write("Enter number: ");
 
-            switch (Console.ReadLine()) {
+            //Shared values for multiple cases
+            string userInput1 = Console.ReadLine();
+
+            switch (userInput1) {
                 case "1":
                     Console.Clear();
-                    Console.WriteLine();
+                    Console.Write("|");
+                    Console.WriteLine("Variable assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("2. Assignment ----------------------------------------- |");
+                    Console.WriteLine("3. Assingment ----------------------------------------- |");
+                    Console.WriteLine("4. Assignment ----------------------------------------- |");
+                    Console.WriteLine("5. Assingment ----------------------------------------- |");
+                    Console.WriteLine("6. Assignment ----------------------------------------- |");
+                    Console.WriteLine("7. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput = Console.ReadLine();
+                    //Assignment 1 & 2
+                    int Number1 = 5, Number2 = 3;
+
+                    switch (userInput) {
+                        case "1":
+
+                        Console.Clear();
+                        Console.WriteLine("1. Assignment - Printing 2 ints on 2 lines" + "\n");
+
+                            
+
+                            Console.WriteLine(Number1 + "\n" + Number2 + "\n");
+                            Console.WriteLine("Press 0 to go back");
+                            break;
+
+                        case "2":
+
+                            Console.Clear();
+                            Console.WriteLine("2. Assignment - Printing 2 ints in a string on 2 lines" + "\n");
+
+                            Console.WriteLine("Number1 is " + Number1 + "\n" + "Number2 is " + Number2 + "\n");
+                            Console.WriteLine("Press 0 to go back");
+                            break;
+
+                        case "3":
+
+                            Console.Clear();
+                            Console.WriteLine("3. Assignment - Printing out multiple values to a string" + "\n");
+
+                            string name = "Søren";
+                            int age = 16;
+                            double money = 123.34;
+
+                            Console.WriteLine("My name is {0}, I'm {1} years old and have earned {2}kr. on fixing bicycles" + "\n");
+                            Console.WriteLine("Press 0 to go back");
+                            break;
+
+                        case "4":
+
+                            Console.Clear();
+                            Console.WriteLine("4. Assignment - Printing out a reciept" + "\n");
+
+                            double cake = 23.56, beer = 34.67, sausage = 65.34;
+                            double total = cake + beer + sausage;
+
+                            Console.WriteLine("Cake - 23,56kr." + "\n" + "Beer - 34,67kr." + "\n" + "Sausage - 65,34kr." + "\n" + "\n" + "{0:N2}kr.", total);
+                            Console.WriteLine("Press 0 to go back");
+                            break;
+
+                        case "5":
+                            break;
+
+                        case "6":
+                            break;
+                    }
                     break;
             }
-
             Console.ReadKey();
-            //do { } while ();
         }
     }
 }
