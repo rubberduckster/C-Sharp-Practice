@@ -108,9 +108,24 @@
                             break;
 
                         case "5":
+                            Console.Clear();
+                            Console.WriteLine("5. Assignment - Taking and printing user input" + "\n");
+
+                            string userName = "";
+                            string userAge = "";
+                            int userAgeCon = 0;
+
+                            Console.WriteLine("Insert your name: ");
+                            userName = Console.ReadLine();
+                            Console.WriteLine("Insert your age: ");
+                            userAge = Console.ReadLine();
+                            userAgeCon = int.Parse(userAge);
+
+                            Console.WriteLine("\n" + "My name is {0} and I'm {1} years old.", userName, userAge);
                             break;
 
                         case "6":
+
                             break;
                     }
                     break;
