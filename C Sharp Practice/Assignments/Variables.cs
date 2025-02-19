@@ -3,11 +3,11 @@ namespace Program
 {
     public class Functions
     {
-        public static string Variable1()
+        public static void Variable1()
         {
-            int tal1 = 5, tal2 = 3;
+            int number1 = 5, number2 = 3;
 
-            return tal1 + "\n" + tal2;
+            Console.WriteLine(number1 + "\n" + number2);
         }
     }
 }

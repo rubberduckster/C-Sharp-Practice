@@ -4,8 +4,12 @@
     {
         public static void Main() {
             //Loop for main menu (options: variables, strings, arithmetic expressions, variables in expression,
-            //boolean variables, if-else statements, switch cases, loops, extended control structure, methods and instances,
-            //return types and parameters, instance variables, inheritance, constructors, arrays, loop of array, public, private and protected)
+            //boolean variables, if-else statements, switch cases, loops, extended control structure
+
+            //Put them into different files (by assingment group) and use void methods() to put them back here
+
+            //Makes the console be able to read unicode
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             //Background color
             Console.BackgroundColor = ConsoleColor.Black;
@@ -24,14 +28,6 @@
             Console.WriteLine("7. Switch cases --------------------------------------- |");
             Console.WriteLine("8. Loops ---------------------------------------------- |");
             Console.WriteLine("9. Extended control structure ------------------------- |");
-            Console.WriteLine("10. Methods and instances ----------------------------- |");
-            Console.WriteLine("11. Return types and parameters ----------------------- |");
-            Console.WriteLine("12. Instance variables -------------------------------- |");
-            Console.WriteLine("13. Inheritance --------------------------------------- |");
-            Console.WriteLine("14. Constructors -------------------------------------- |");
-            Console.WriteLine("15. Arrays -------------------------------------------- |");
-            Console.WriteLine("16. Loop of array ------------------------------------- |");
-            Console.WriteLine("16. Public, private and protected --------------------- |");
             Console.WriteLine("");
             Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
             Console.WriteLine("");
@@ -69,7 +65,8 @@
 
                             
 
-                            Console.WriteLine(Number1 + "\n" + Number2 + "\n");
+                            //Console.WriteLine(Number1 + "\n" + Number2 + "\n");
+                            Functions.Variable1();
                             Console.WriteLine("Press 0 to go back");
                             break;
 
@@ -303,7 +300,7 @@
                 case "6":
                     Console.Clear();
                     Console.Write("|");
-                    Console.WriteLine("Variable assignments.");
+                    Console.WriteLine("If-else assignments.");
                     Console.WriteLine("1. Assingment ----------------------------------------- |");
                     Console.WriteLine("2. Assignment ----------------------------------------- |");
                     Console.WriteLine("3. Assingment ----------------------------------------- |");
@@ -355,11 +352,7 @@
 
                             userAge1 = int.Parse(userAge);
 
-                            if (userAge1 >= 50 && userAge1 <= 60)
-                            {
-                                Console.WriteLine("You're not too old or too young.");
-                            }
-                            else if (userAge1 < 57) 
+                            if (userAge1 < 57) 
                             {
                                 Console.WriteLine("You are not too old.");
                             }
@@ -371,6 +364,27 @@
                             break;
 
                         case "3":
+                            Console.Clear();
+                            Console.WriteLine("3. Assignment - User input age" + "\n");
+
+                            Console.Write("Insert your age: ");
+                            string age = Console.ReadLine();
+                            int age1 = 0;
+
+                            age1 = int.Parse(age);
+
+                            if (age1 >= 50 && age1 <= 60)
+                            {
+                                Console.WriteLine("You're not too old or too young.");
+                            }
+                            else if (age1 > 60)
+                            {
+                                Console.WriteLine("You are too old");
+                            }
+
+                            break;
+
+                        case "4":
                             Console.Clear();
                             Console.WriteLine("4. Assignment - User login" + "\n");
 
@@ -391,9 +405,9 @@
                             }
                             break;
 
-                        case "4":
+                        case "5":
                             Console.Clear();
-                            Console.WriteLine("3. Assignment - User login" + "\n");
+                            Console.WriteLine("5. Assignment - User login" + "\n");
 
                             Console.WriteLine("Login.com");
                             Console.Write("Insert your username: ");
@@ -419,7 +433,194 @@
                             }
                             break;
 
-                        case "5":
+                        case "6":
+                            Console.Clear();
+                            Console.WriteLine("6. Assignment - Deduction" + "\n");
+
+                            Console.WriteLine("Deduction on car travel - You get a 1,93kr deduction per km after a certain distance");
+                            Console.Write("Insert how many km you drive to work everyday: ");
+
+                            string distance = Console.ReadLine();
+                            double distance1 = 0;
+
+                            double totalbetween, totalmore = 0;
+
+                            distance1 = int.Parse(distance);
+
+                            if (distance1 < 24)
+                            {
+                                Console.WriteLine("You don't get any deduction");
+                            }
+                            else if (distance1 >= 25 && distance1 <= 120)
+                            {
+                                totalbetween = (distance1 - 24) * 1.93;
+                                Console.WriteLine("You get {0:N2}kr deducted", totalbetween);
+                            }
+                            else if (distance1 > 121)
+                            {
+                                totalmore = 96 * 1.93 + (distance1 - 120) * 0 - 0.97;
+                                Console.WriteLine("You get {0:N2}kr deducted", totalmore);
+                            }
+
+                            break;
+
+                        case "7":
+                            Console.Clear();
+                            Console.Title = "The Party";
+                            Console.WriteLine("7. Assignment - Party" + "\n");
+
+                            Console.WriteLine("What is your favorite color?\nYou can pick between:\n1. red\n2. green\n3. blue\n4. yellow\n");
+                            Console.Write("Insert your favorite colors number: ");
+                            string color = Console.ReadLine();
+                            Console.WriteLine("");
+
+                            Console.WriteLine("How old are you?");
+                            Console.Write("Insert your age: ");
+                            string drinkAge = Console.ReadLine();
+
+                            int drinkAge1 = int.Parse(drinkAge);
+
+                            if (color == "1")
+                            {
+                                Console.Clear();
+                                Console.BackgroundColor = ConsoleColor.DarkRed;
+                                Console.Clear();
+                                Console.WriteLine("★"); //Can't make it display correctly rn? fix later
+
+                            }
+                            else if (color == "2")
+                            {
+                                Console.Clear();
+                                Console.BackgroundColor= ConsoleColor.DarkGreen;
+                                Console.Clear();
+                            }
+                            else if (color == "3")
+                            {
+                                Console.Clear();
+                                Console.BackgroundColor = ConsoleColor.DarkBlue;
+                                Console.Clear();
+                            }
+                            else if (color == "4")
+                            {
+                                Console.Clear();
+                                Console.BackgroundColor = ConsoleColor.DarkYellow;
+                                Console.Clear();
+                            }
+
+                            if (drinkAge1 > 18)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("You're welcome in the cocktail bar");
+                                Console.Clear();
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("You're welcome in the soda bar");
+                                Console.Clear();
+                            }
+
+                            break;
+                    }
+
+                    break;
+
+                case "7":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Switch-case assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("2. Assignment ----------------------------------------- |");
+                    Console.WriteLine("3. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput7 = Console.ReadLine();
+
+                    break;
+
+                case "8":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Loops assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("2. Assignment ----------------------------------------- |");
+                    Console.WriteLine("3. Assingment ----------------------------------------- |");
+                    Console.WriteLine("4. Assignment ----------------------------------------- |");
+                    Console.WriteLine("5. Assingment ----------------------------------------- |");
+                    Console.WriteLine("6. Assignment ----------------------------------------- |");
+                    Console.WriteLine("7. Assignment ----------------------------------------- |");
+                    Console.WriteLine("8. Assignment ----------------------------------------- |");
+                    Console.WriteLine("9. Assignment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput8 = Console.ReadLine();
+
+                    switch (userInput8)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - 1 to 10" + "\n");
+
+                            Console.WriteLine("Done with for loop");
+                             for (int i = 1; i < 11; i++)
+                             {
+                                 Console.WriteLine(i);
+                             }
+
+                            Console.WriteLine("\n Done with while loop");
+                             int a = 1;
+                             while (a < 11)
+                             {
+                                 Console.WriteLine(a);
+                                 a++;
+                             }
+                             break;
+
+                        case "2":
+                            Console.Clear();
+                            Console.WriteLine("2. Assignment - 100 to 1" + "\n");
+
+                            Console.WriteLine("Done with for loop");
+                             for (int i = 100; i > 0; i--)
+                             {
+                                 Console.WriteLine(i);
+                             }
+
+                            Console.WriteLine("\nDone with while loop");
+                             int b = 100;
+                             while (b > 0)
+                             {
+                                 Console.WriteLine(b);
+                                 b--;
+                             }
+                            break;
+
+                        case "3":
+                            Console.Clear();
+                            Console.WriteLine("3. Assignment - 5 table" + "\n");
+
+                            for (int i = 0; i < 51;)
+                            {
+                                Console.WriteLine(i);
+                                i = i + 5;
+                            }
+
+                            break;
+
+                        case "4":
+                            Console.Clear();
+                            Console.WriteLine("4. Assignment - ???" + "\n");
+
+                            Console.WriteLine("Tbh wasn't 100% sure what it tried to make us do\n");
+                            Console.Write("Assignment description: Lav et while loop og et med for-loop, som udskriver en talrækkefølgen: 20-0.");
+
                             break;
                     }
 
