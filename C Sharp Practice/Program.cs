@@ -622,7 +622,135 @@
                             Console.Write("Assignment description: Lav et while loop og et med for-loop, som udskriver en talrækkefølgen: 20-0.");
 
                             break;
+
+                        case "5":
+                            Console.Clear();
+                            Console.WriteLine("5. Assignment - 7 table with formatting result to right-alignment" + "\n");
+
+                            int j = 0;
+
+                            for (int i = 0; i < 141; j++)
+                            {
+                                Console.WriteLine("{0, 2} * 7 = {1, 3}", j, i);
+                                i = i + 7;
+                            }
+
+                            break;
+
+                        case "6":
+                            Console.Clear();
+                            Console.WriteLine("6. Assignment - User number table" + "\n");
+
+                            Console.Write("Insert the number you wanna make a table of: ");
+                            string userNumber = Console.ReadLine();
+                            int userNumber1 = 0;
+                            userNumber1 = int.Parse(userNumber);
+
+                            int h = 0;
+
+                            for (int i = 0; i < 100; h++)
+                            {
+                                Console.WriteLine("{0, 2} * {1} = {2, 2}", h, userNumber1, i);
+                                i = i + userNumber1;
+                            }
+
+                            break;
+
+                        case "7":
+                            Console.Clear();
+                            Console.WriteLine("7. Assignment - Creating a box" + "\n");
+
+
+                            for (int i = 0; i < 10; i++) 
+                            {
+                                Console.SetCursorPosition(20 + i, 4);
+                                Console.WriteLine("■");
+                                Console.SetCursorPosition(20 + i, 8);
+                                Console.WriteLine("■");
+                            }
+
+                            for (int k = 0; k < 4; k++)
+                            {
+                                Console.SetCursorPosition(20, 4 + k);
+                                Console.WriteLine("■");
+                                Console.SetCursorPosition(29, 4 + k);
+                                Console.WriteLine("■");
+
+                            }
+
+                            break;
+
+                        case "8":
+                            Console.Clear();
+                            Console.WriteLine("8. Assignment - Creating a box w/ my name" + "\n");
+
+                            for (int i = 0; i < 10; i++)
+                            {
+                                Console.SetCursorPosition(20 + i, 4);
+                                Console.WriteLine("■");
+                                Console.SetCursorPosition(20 + i, 8);
+                                Console.WriteLine("■");
+                            }
+
+                            for (int k = 0; k < 4; k++)
+                            {
+                                Console.SetCursorPosition(20, 4 + k);
+                                Console.WriteLine("■");
+                                Console.SetCursorPosition(30 - 1, 4 + k);
+                                Console.WriteLine("■");
+
+                            }
+
+                            Console.SetCursorPosition(23, 6);
+                            Console.WriteLine("Ruby");
+
+                            break;
+
+                        case "9":
+                            Console.Clear();
+                            Console.WriteLine("9. Assignment - Creating a box w/ user meassurement and name" + "\n");
+
+                            string userName = "";
+
+                            Console.Write("Insert your name: ");
+                            userName = Console.ReadLine();
+
+                            Console.Write("Insert the box width: ");
+                            int userBoxWidth = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Insert the box heigth: ");
+                            int userBoxHeight = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Clear();
+
+                            for (int i = 0; i < userBoxWidth; i++)
+                            {
+                                Console.SetCursorPosition(0 + i, 0);
+                                Console.WriteLine("■");
+                                Console.SetCursorPosition(0 + i, userBoxHeight);
+                                Console.WriteLine("■");
+                            }
+
+                            for (int k = 0; k < userBoxHeight; k++)
+                            {
+                                Console.SetCursorPosition(0, 0 + k);
+                                Console.WriteLine("■");
+                                Console.SetCursorPosition(userBoxWidth - 1, 0 + k);
+                                Console.WriteLine("■");
+
+                            }
+
+                            int namePositionX = userBoxWidth / 2, namePositionY = userBoxHeight / 2;
+
+                            Console.SetCursorPosition(namePositionX - userName.Length / 2, namePositionY);
+                            Console.WriteLine(userName);
+
+                            break;
                     }
+
+                    break;
+
+                case "9":
 
                     break;
             }
