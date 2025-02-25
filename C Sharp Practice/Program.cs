@@ -6,7 +6,8 @@
             //Loop for main menu (options: variables, strings, arithmetic expressions, variables in expression,
             //boolean variables, if-else statements, switch cases, loops, extended control structure
 
-            //Put them into different files (by assingment group) and use void methods() to put them back here
+            //Put them into different files (by assingment group) and use void methods()
+            //Potentially make folder the for menus
 
             //Makes the console be able to read unicode
             Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -38,19 +39,8 @@
 
             switch (userInputMain) {
                 case "1":
-                    Console.Clear();
-                    Console.Write("|");
-                    Console.WriteLine("Variable assignments.");
-                    Console.WriteLine("1. Assingment ----------------------------------------- |");
-                    Console.WriteLine("2. Assignment ----------------------------------------- |");
-                    Console.WriteLine("3. Assingment ----------------------------------------- |");
-                    Console.WriteLine("4. Assignment ----------------------------------------- |");
-                    Console.WriteLine("5. Assingment ----------------------------------------- |");
-                    Console.WriteLine("6. Assignment ----------------------------------------- |");
-                    Console.WriteLine("0. Go back -------------------------------------------- |");
-                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
-                    Console.WriteLine("");
-                    Console.Write("Enter number: ");
+                    //Prints menu
+                    VariableFunctions.VariablesMenu();
 
                     //Shared values for multiple cases
                     string userInput1 = Console.ReadLine();
@@ -61,7 +51,7 @@
                         Console.WriteLine("1. Assignment - Printing 2 ints on 2 lines" + "\n");
 
                             //Assignment 1 - Found in Variables.cs
-                            Functions.Variables1();
+                            VariableFunctions.Variables1();
                             Console.WriteLine("Press 0 to go back");
                             break;
 
