@@ -8,7 +8,7 @@ namespace Program
         {
             Console.Clear();
             Console.Write("|");
-            Console.WriteLine("Variable assignments.");
+            Console.WriteLine("Variables assignments.");
             Console.WriteLine("1. Assingment ----------------------------------------- |");
             Console.WriteLine("2. Assignment ----------------------------------------- |");
             Console.WriteLine("3. Assingment ----------------------------------------- |");

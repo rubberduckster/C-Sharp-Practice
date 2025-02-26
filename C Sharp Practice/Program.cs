@@ -4,7 +4,7 @@
     {
         public static void Main() {
             //Loop for main menu (options: variables, strings, arithmetic expressions, variables in expression,
-            //boolean variables, if-else statements, switch cases, loops, extended control structure
+            //boolean variables, if-else statements, switch cases, loops, extended control structure, method and instances
 
             //Put them into different files (by assingment group) and use void methods()
             //Potentially make folder the for menus
@@ -29,6 +29,8 @@
             Console.WriteLine("7. Switch cases --------------------------------------- |");
             Console.WriteLine("8. Loops ---------------------------------------------- |");
             Console.WriteLine("9. Extended control structure ------------------------- |");
+            Console.WriteLine("10. Methods and instances ----------------------------- |");
+            Console.WriteLine("11. Return types and parameters ----------------------- |");
             Console.WriteLine("");
             Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
             Console.WriteLine("");
@@ -39,12 +41,13 @@
 
             switch (userInputMain) {
                 case "1":
-                    //Prints menu
+                    //Variables menu //Testing methods from other file use
                     VariableFunctions.VariablesMenu();
 
                     //Shared values for multiple cases
                     string userInput1 = Console.ReadLine();
 
+                    //Variables assignments //Testing methods from other file use
                     switch (userInput1) {
                         case "1":
                         Console.Clear();
@@ -73,7 +76,7 @@
                             int age = 16;
                             double money = 123.34;
 
-                            Console.WriteLine("My name is {0}, I'm {1} years old and have earned {2}kr. on fixing bicycles" + "\n");
+                            Console.WriteLine("My name is {0}, I'm {1} years old and have earned {2}kr. on fixing bicycles\n", name, age, money);
                             Console.WriteLine("Press 0 to go back");
                             break;
 
@@ -828,7 +831,7 @@
                             }
                             else if (distance > 100)
                             {
-                                total = 76 * 1.54 + (distance - 120) * 0.77;
+                                total = 76 * 1.54 + (distance - 100) * 0.77;
                                 Console.WriteLine("You get {0:N2}kr deducted", total);
                             }
 
@@ -836,14 +839,113 @@
 
                         case "4":
                             Console.Clear();
-                            Console.WriteLine("4. Assignment - what type of taxes do you need to pay based on income" + "\n");
+                            Console.WriteLine("4. Assignment - Tax calculator" + "\n");
 
-                            int income = Convert.ToInt32(Console.ReadLine());
+                            //Recieves users income
+                            Console.WriteLine("Please write your income: ");
+                            double income = Convert.ToInt32(Console.ReadLine());
 
-                            if (income < 42000)
+                            //Calculates the different tax rates
+                            double minimumTax = income * 0.30;
+                            double mediumTax = (income - 42000) * 0.36 + (42000 * 0.30);
+                            double maximumTax = (income - 280000) * 0.51 + (280000 * 0.36);
+
+                            //Writes out the users tax category and what they need to pay
+                            if (income <= 42000)
                             {
-                                Console.WriteLine();
+                                Console.WriteLine("You need to pay 30% tax\nYou need to pay {0:N2}kr", minimumTax);
                             }
+                            else if (income >= 280000)
+                            {
+                                Console.WriteLine("You need to pay 30% tax and another 6% extra for anything above 280.000kr\nYou need to pay {0:N2}kr", mediumTax);
+                            }
+                            else if (income >= 390000)
+                            {
+                                Console.WriteLine("You need to pay 30% tax and another 6% extra for anything above 280.000kr and another 15% for anything above 390.000kr\nYou need to pay {0:N2}kr", maximumTax);
+                            }
+
+                            break;
+
+                        case "5":
+                            Console.Clear();
+                            Console.WriteLine("5. Assignment - Interest calculator" + "\n");
+
+                            break;
+                    }
+
+                    break;
+
+                case "10":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Extended control structure assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("2. Assignment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput10 = Console.ReadLine();
+
+                    //Method and instances assignments
+                    switch (userInput10)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Calling method on a class" + "\n");
+
+                            Book sherlockHolmes = new Book();
+
+                            sherlockHolmes.PrintInfo();
+
+                            break;
+
+                        case "2":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Checking if you can afford the book" + "\n");
+
+                            Book theMazeRunner = new Book();
+
+                            theMazeRunner.CanAfford(150, 200);
+
+                            break;
+                    }
+
+                    break;
+
+                case "11":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Return types and parameters assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("2. Assignment ----------------------------------------- |");
+                    Console.WriteLine("3. Assingment ----------------------------------------- |");
+                    Console.WriteLine("4. Assignment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput11 = Console.ReadLine();
+
+                    switch (userInput11)
+                    {
+                        case "1":
+                            Car audi = new Car();
+
+                            audi.MotorOn();
+
+                            audi.MotorOff();
+
+                            break;
+
+                        case "2":
+                            Car Honda = new Car();
+
+                            Honda.FillGas(2.5, true);
 
                             break;
                     }
