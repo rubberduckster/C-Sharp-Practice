@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    internal class Car
+    class Car
     {
+        //ReturnTypesAndParameters1
         public void MotorOn()
         {
             Console.WriteLine("The motor is on");
@@ -18,6 +19,7 @@ namespace Program
             Console.WriteLine("The motor is off");
         }
 
+        //ReturnTypesAndParameters2&3
         public void FillGas(double liters, bool isDiesel)
         {
             Console.Write("Filled tank with: " + liters + " liters ");
@@ -32,9 +34,10 @@ namespace Program
             }
         }
 
+        //ReturnTypesAndParameters4
         public void RemainingGas(double litersLeft)
         {
-
+            Console.WriteLine("You have {0} liters left in your tank", litersLeft);
         }
     }
 }

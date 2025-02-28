@@ -31,6 +31,7 @@
             Console.WriteLine("9. Extended control structure ------------------------- |");
             Console.WriteLine("10. Methods and instances ----------------------------- |");
             Console.WriteLine("11. Return types and parameters ----------------------- |");
+            Console.WriteLine("12. Instance variables -------------------------------- |");
             Console.WriteLine("");
             Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
             Console.WriteLine("");
@@ -934,6 +935,9 @@
                     switch (userInput11)
                     {
                         case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Motor on and off" + "\n");
+
                             Car audi = new Car();
 
                             audi.MotorOn();
@@ -942,10 +946,244 @@
 
                             break;
 
+                        //Assignment 2 & 3
                         case "2":
-                            Car Honda = new Car();
+                            Console.Clear();
+                            Console.WriteLine("2. Assignment - Fill gas" + "\n");
 
-                            Honda.FillGas(2.5, true);
+                            Car honda = new Car();
+
+                            honda.FillGas(2.5, true);
+
+                            break;
+
+                        case "3":
+                            Console.Clear();
+                            Console.WriteLine("3. Assignment - Remaining" + "\n");
+
+                            Car bugatti = new Car();
+
+                            bugatti.RemainingGas(10);
+
+                            break;
+                    }
+
+                    break;
+
+                case "12":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Instance variables assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput12 = Console.ReadLine();
+
+                    switch (userInput12)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Comparing price" + "\n");
+
+                            Book theHungerGames = new Book();
+
+                            theHungerGames.price = 120;
+                            theHungerGames.title = "The Hunger Games";
+                            theHungerGames.CanAffordPart2(200);
+
+                            break;
+                    }
+
+                    break;
+
+                case "13":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Inheritance assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput13 = Console.ReadLine();
+
+                    switch (userInput13)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Chair and computer" + "\n");
+
+                            Chair theFelixChair = new Chair();
+                            Computer ROGFlowZ13 = new Computer();
+
+                            theFelixChair.price = 16000;
+                            theFelixChair.chairBrand = "Maiden Home";
+                            theFelixChair.chairModel = "The Felix Chair";
+
+                            ROGFlowZ13.price = 8000;
+                            ROGFlowZ13.computerBrand = "Asus";
+                            ROGFlowZ13.computerModel = "ROG Flow Z13";
+
+                            Console.WriteLine("Chair brand: {0}\nChair model: {1}\nIt goes for {2}kr\n", theFelixChair.chairBrand, theFelixChair.chairModel, theFelixChair.price);
+                            Console.WriteLine("Computer brand: {0}\nComputer model: {1}\nIt goes for {2}kr", ROGFlowZ13.computerBrand, ROGFlowZ13.computerModel, ROGFlowZ13.price);
+
+                            break;
+                    }
+
+                    break;
+
+                case "14":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Constructor assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput14 = Console.ReadLine();
+
+                    switch (userInput14)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Constructor on book!" + "\n");
+
+                            Book theMazeRunner2 = new Book();
+
+                            Console.WriteLine("The Maze Runner: Scorch trials - " + theMazeRunner2.author);
+
+                            break;
+                    }
+
+                    break;
+
+                case "15":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Array assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput15 = Console.ReadLine();
+
+                    switch (userInput15)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Array specific placed elements" + "\n");
+
+                            int[] numbers = new int[4] {- 2, - 1, 0, 10};
+
+                            Console.WriteLine("Index 1 and 3 of the numbers array" + numbers[1] + " & " + numbers[3]);
+                            Console.WriteLine("The sum of the array: " + numbers[0] + numbers[1] + numbers[2] + numbers[3]);
+
+                            break;
+                    }
+
+                    break;
+
+                case "16":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Array run-through assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput16 = Console.ReadLine();
+
+                    switch (userInput16)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Array math" + "\n");
+
+                            int[] math = {12, 34, 1, 6, 76, 21};
+
+                            for (int i = 0; i < math.Length; i++)
+                            {
+
+                            }
+
+                            break;
+                    }
+
+                    break;
+
+                //add 17, which is the answer method
+
+                case "18":
+                    Console.Clear();
+                    Console.Write("|");
+                    Console.WriteLine("Array run-through assignments.");
+                    Console.WriteLine("1. Assingment ----------------------------------------- |");
+                    Console.WriteLine("0. Go back -------------------------------------------- |");
+                    Console.WriteLine("Type one of the numbers in the menu to view the assingment.");
+                    Console.WriteLine("");
+                    Console.Write("Enter number: ");
+
+                    //Shared values for multiple cases
+                    string userInput18 = Console.ReadLine();
+
+                    switch (userInput18)
+                    {
+                        case "1":
+                            Console.Clear();
+                            Console.WriteLine("1. Assignment - Strong vs weak password" + "\n");
+
+                            Console.WriteLine("Make a strong password!\n- It has to include minimum 2 numbers\n- 2 of the following special characters (!, @, #, $, %, &, *)\n- A length on at least 8 characters.\n");
+                            Console.Write("Insert your password: ");
+                            string password = Console.ReadLine();
+
+                            string[] specialChars = { "!", "@", "#", "$", "%", "&", "*" };
+
+                            int specialCount = 0, numberCount = 0;
+
+                            //Checks for special characters in the password
+                            for (int i = 0; i < password.Length; i++)
+                            {
+                                if (specialChars.Any(password.Contains))
+                                {
+                                    specialCount++;
+                                }
+                            }
+
+                            //Checks for numbers in the password
+                            for (int i = 0; i < password.Length; i++)
+                            {
+                                int passwordNumbers = 0;
+                                bool result = int.TryParse(password[i].ToString(), out passwordNumbers);
+
+                                if (result == true)
+                                {
+                                    numberCount++;
+                                }
+                            }
+
+                            if (password.Length >= 8 && numberCount >= 2 && specialCount >= 2)
+                            {
+                                Console.WriteLine("Strong password");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Weak password");
+                            }
 
                             break;
                     }
